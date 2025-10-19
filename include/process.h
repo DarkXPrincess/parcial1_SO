@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-struct process{
+struct Process{
     string id;
     int bt, at, q ,pr;
     int remaining;

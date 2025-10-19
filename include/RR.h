@@ -1,15 +1,15 @@
 #ifndef RR_H
 #define RR_H
 
-#include "scheduler.h"
+#include "Scheduler.h"
 #include <queue>
 
-class RR : public scheduler {
+class RR : public Scheduler {
     int quantum;
-    std::queue<process> ready;
+    std::queue<Process> ready;
 public:
     RR(int q);
-    void add(process p) override;
-    std::vector<process> execute(int &time) override;
+    void add(Process p) override;
+    std::vector<Process> execute (int &time) override;
 };
 #endif

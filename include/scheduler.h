@@ -2,14 +2,13 @@
 #define SCHEDULER_H
 
 #include <vector>
-#include "process.h"
+#include "Process.h"
 
-class scheduler{
-    public:
-        virtual void add(process p)=0
-        virtual std::vector<process> execute(int &currentTime)=0;
-        virtual ~scheduler(){}
-
-} ;
+class Scheduler {
+public:
+    virtual void add(Process p) = 0;
+    virtual std::vector<Process> execute(int &currentTime) = 0;
+    virtual ~Scheduler() {}
+};
 
 #endif

@@ -1,14 +1,14 @@
 #ifndef MLQ_H
 #define MLQ_H
 
-#include "scheduler.h"
+#include "Scheduler.h"
 #include <vector>
 
 class MLQ{
-    std::vector<scheduler*>queues;
+    std::vector<Scheduler*>queues;
 public:
-    MLQ(std::vector<scheduler*> q);
-    std::vector<process> execute(std::vector<process> &processes);
+    MLQ(std::vector<Scheduler*> q);
+    std::vector<Process> execute(std::vector<Process> &processes);
 
 };
 #endif

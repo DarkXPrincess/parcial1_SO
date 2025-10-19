@@ -1,14 +1,14 @@
 #ifndef FCFS_H
 #define FCFS_H
 
-#include "scheduler.h"
+#include "Scheduler.h"
 #include <algorithm>
 
-class FCFS : public scheduler {
-    std::vector<process> ready;
+class FCFS : public Scheduler {
+    std::vector<Process> ready;
 public:
-    void add(process p) override;
-    std::vector<process> execute(int &time) override;
+    void add(Process p) override;
+    std::vector<Process> execute(int &time) override;
 
 };
 #endif

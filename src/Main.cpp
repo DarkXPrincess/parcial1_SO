@@ -4,9 +4,10 @@
 #include <iomanip>
 #include <vector>
 
-#include "RoundRobin.h"
+#include "RR.h"
 #include "FCFS.h"
 #include "MLQ.h"
+
 
 using namespace std;
 
@@ -29,8 +30,8 @@ int main() {
         processes.push_back({id, bt, at, q, pr, bt});
     }
 
-    RoundRobin rr3(3);
-    RoundRobin rr5(5);
+    RR rr3(3);
+    RR rr5(5);
     FCFS fcfs;
     MLQ mlq({&rr3, &rr5, &fcfs});
 
